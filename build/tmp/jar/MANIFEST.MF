@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: CraftableHorseArmour
+Implementation-Version: 1.16.4-1.4.0
+Specification-Vendor: Ewy
+Specification-Title: CraftableHorseArmour
+Implementation-Timestamp: 2020-11-19T16:36:27+0100
+Specification-Version: 1
+Implementation-Vendor: Ewy
+
