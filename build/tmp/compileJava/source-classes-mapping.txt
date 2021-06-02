@@ -1,0 +1,2 @@
+com/ewyboy/craftablehorsearmour/CraftableHorseArmour.java
+ com.ewyboy.craftablehorsearmour.CraftableHorseArmour
