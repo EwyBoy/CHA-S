@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "chas",
+  "version": "${version}",
+
+  "name": "Craftable Horse Armour & Saddle",
+  "description": "Read mod name",
+  "authors": [
+    "Ewy"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/cha-s",
+    "sources": "https://github.com/EwyBoy/CHA-S",
+    "issues": "https://github.com/EwyBoy/CHA-S/issues"
+  },
+
+  "license": "MIT",
+  "icon": "icon.png",
+
+  "environment": "*",
+  "entrypoints": {},
+  "mixins": [],
+
+  "depends": {
+    "fabricloader": ">=0.10.0",
+    "minecraft": "1.17.x",
+    "fabric-key-binding-api-v1": "*"
+  }
+}

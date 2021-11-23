@@ -1,0 +1,67 @@
+plugins {
+    id 'fabric-loom' version '0.10-SNAPSHOT'
+    id 'com.matthewprenger.cursegradle' version '1.4.0'
+    id 'maven-publish'
+}
+
+sourceCompatibility = JavaVersion.VERSION_16
+targetCompatibility = JavaVersion.VERSION_16
+
+archivesBaseName = project.MOD_NAME
+version = project.MC_VERSION_GENERAL + "-" + project.VERSION + "-" + project.MOD_LOADER
+group = project.MAVEN_GROUP
+
+repositories {}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.MC_VERSION}"
+    mappings "net.fabricmc:yarn:${project.YARN_MAPPINGS}:v2"
+
+    modImplementation "net.fabricmc:fabric-loader:${project.LOADER_VERSION}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.FABRIC_VERSION}"
+}
+
+processResources {
+    inputs.property "version", project.version
+
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.encoding = "UTF-8"
+    it.options.release = 16
+}
+
+java {
+    withSourcesJar()
+}
+
+jar {
+    from("LICENSE") {
+        rename { "${it}_${project.archivesBaseName}"}
+    }
+}
+
+curseforge {
+    if (project.hasProperty('CF_API_KEY')){
+        apiKey = project.getProperty('CF_API_KEY')
+    }
+    project {
+        id = "${PROJECT_ID}"
+        changelogType = 'markdown'
+        changelog = file('CHANGELOG.md')
+        releaseType = "${RELEASE_TYPE}"
+        addGameVersion "${MOD_LOADER}"
+        addGameVersion "${JAVA_VERSION}"
+        addGameVersion '1.17.1'
+        mainArtifact(remapJar) {
+            displayName = "${ALIAS} v${VERSION} for ${MC_VERSION_GENERAL} ${MOD_LOADER}"
+        }
+    }
+    options {
+        forgeGradleIntegration = false
+        javaVersionAutoDetect = false
+    }
+}
