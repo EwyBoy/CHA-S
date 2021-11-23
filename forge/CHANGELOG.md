@@ -1,3 +1,9 @@
+#### **CHA&S v1.7 for 1.16 Forge**
+* Support for leather horse armour
+* Updated to the latest versions
+* Configured for Forge/Fabric multi project
+* Fixed some minor stuff
+
 #### **CHA&S v1.6 for 1.16 Forge**
 * More toolchain fixes
 * Automated uploads to CurseForge using CurseGradle

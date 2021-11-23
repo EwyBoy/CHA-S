@@ -22,7 +22,7 @@ version = "${MC_VERSION}-${VERSION}--${MOD_LOADER}"
 group = "com.ewyboy.${MODID}"
 archivesBaseName = MODNAME
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(16)
+java.toolchain.languageVersion = JavaLanguageVersion.of(8)
 
 minecraft {
     apply plugin: 'idea'
@@ -99,10 +99,19 @@ curseforge {
         changelogType = 'markdown'
         changelog = file('CHANGELOG.md')
         releaseType = "${RELEASE_TYPE}"
-        addGameVersion 'Forge'
-        addGameVersion '1.17.1'
+        addGameVersion "${MOD_LOADER}"
+        addGameVersion "${JAVA_VERSION}"
+        addGameVersion '1.16.5'
+        addGameVersion '1.16.4'
+        addGameVersion '1.16.3'
+        addGameVersion '1.16.2'
+        addGameVersion '1.16.1'
+        addGameVersion '1.16'
         mainArtifact(jar) {
-            displayName = "${ALIAS} v${VERSION} for ${MC_VERSION_MAJOR} Forge"
+            displayName = "${ALIAS} v${VERSION} for ${MC_VERSION_MAJOR} ${MOD_LOADER}"
+        }
+        options {
+            javaVersionAutoDetect = false
         }
     }
 }

@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Specification-Title: Craftable Horse Armour & Saddle
+Specification-Vendor: Ewy
+Specification-Version: 1.16.5
+Implementation-Title: forge
+Implementation-Version: 1.7
+Implementation-Vendor: Ewy
+Implementation-Timestamp: 2021-11-23T13:43:56+0100
+
