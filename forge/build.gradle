@@ -99,10 +99,15 @@ curseforge {
         changelogType = 'markdown'
         changelog = file('CHANGELOG.md')
         releaseType = "${RELEASE_TYPE}"
+        addGameVersion "${MOD_LOADER}"
+        addGameVersion "${JAVA_VERSION}"
         addGameVersion 'Forge'
         addGameVersion '1.17.1'
         mainArtifact(jar) {
             displayName = "${ALIAS} v${VERSION} for ${MC_VERSION_MAJOR} Forge"
+        }
+        options {
+            javaVersionAutoDetect = false
         }
     }
 }

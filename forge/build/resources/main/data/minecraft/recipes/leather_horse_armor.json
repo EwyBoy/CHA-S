@@ -13,7 +13,7 @@
       "item": "minecraft:white_wool"
     },
     "X": {
-      "tag": "minecraft:leather"
+      "item": "minecraft:leather"
     },
     "I": {
       "item": "minecraft:leather_leggings"
