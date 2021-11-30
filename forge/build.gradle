@@ -1,12 +1,11 @@
 buildscript {
     repositories {
-        maven { url = 'https://files.minecraftforge.net/maven' }
-        maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
+        // These repositories are only for Gradle plugins, put any other repositories in the repository block further below
+        maven { url = 'https://maven.minecraftforge.net' }
         mavenCentral()
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
-        classpath group: 'org.spongepowered', name: 'mixingradle', version: '0.7-SNAPSHOT'
     }
 }
 
@@ -18,20 +17,23 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = "${MC_VERSION}-${VERSION}--${MOD_LOADER}"
+version = "${MC_VERSION}-${VERSION}-${MOD_LOADER}"
 group = "com.ewyboy.${MODID}"
 archivesBaseName = MODNAME
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(16)
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
+println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 minecraft {
-    apply plugin: 'idea'
-    mappings channel: MCP_CHANNEL, version: MCP_MAPPINGS
+
+    mappings channel: 'official', version: '1.18'
 
     runs {
         client {
             workingDirectory project.file('run')
-            property 'fml.earlyprogresswindow', 'false'
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+
             mods {
                 chas {
                     source sourceSets.main
@@ -41,6 +43,9 @@ minecraft {
 
         server {
             workingDirectory project.file('run')
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+
             mods {
                 chas {
                     source sourceSets.main
@@ -50,6 +55,11 @@ minecraft {
 
         data {
             workingDirectory project.file('run')
+
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+            args '--mod', 'examplemod', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+
             mods {
                 chas {
                     source sourceSets.main
@@ -59,19 +69,16 @@ minecraft {
     }
 }
 
-repositories {
-    maven {
-        url "https://www.cursemaven.com"
-        content {
-            includeGroup "curse.maven"
-        }
-    }
-}
-
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
+repositories {
+
+}
+
 dependencies {
-    minecraft "net.minecraftforge:forge:${MC_VERSION}-${FORGE_VERSION}"
+
+    minecraft 'net.minecraftforge:forge:1.18-38.0.0'
+
 }
 
 jar {
@@ -90,6 +97,20 @@ jar {
 
 jar.finalizedBy('reobfJar')
 
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifact jar
+        }
+    }
+    repositories {
+        maven {
+            url "file://${project.projectDir}/mcmodsrepo"
+        }
+    }
+}
+
+
 curseforge {
     if (project.hasProperty('CF_API_KEY')){
         apiKey = project.getProperty('CF_API_KEY')
@@ -102,7 +123,7 @@ curseforge {
         addGameVersion "${MOD_LOADER}"
         addGameVersion "${JAVA_VERSION}"
         addGameVersion 'Forge'
-        addGameVersion '1.17.1'
+        addGameVersion '1.18'
         mainArtifact(jar) {
             displayName = "${ALIAS} v${VERSION} for ${MC_VERSION_MAJOR} Forge"
         }

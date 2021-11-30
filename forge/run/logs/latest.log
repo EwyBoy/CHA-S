@@ -1,29 +1,415 @@
-[23Nov2021 13:54:30.801] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 1.17, --assetsDir, C:\Users\Eivind\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 37.0.112, --fml.mcVersion, 1.17.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20210706.113038]
-[23Nov2021 13:54:30.806] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 9.0.7+91+master.8569cdf starting: java version 16.0.2 by Eclipse Foundation
-[23Nov2021 13:54:30.944] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.4 Source=union:/C:/Users/Eivind/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.4/4ec7d77d9ab32596ca0b78bb123956734767e3a/mixin-0.8.4.jar%2325! Service=ModLauncher Env=CLIENT
-[23Nov2021 13:54:32.617] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\Eivind\.gradle\caches\forge_gradle\assets, --assetIndex, 1.17]
-[13:54:38] [Render thread/WARN]: Assets URL 'union:/C:/Users/Eivind/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.17.1-37.0.112_mapped_official_1.17.1/forge-1.17.1-37.0.112_mapped_official_1.17.1-recomp.jar%2375!/assets/.mcassetsroot' uses unexpected schema
-[13:54:38] [Render thread/WARN]: Assets URL 'union:/C:/Users/Eivind/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.17.1-37.0.112_mapped_official_1.17.1/forge-1.17.1-37.0.112_mapped_official_1.17.1-recomp.jar%2375!/data/.mcassetsroot' uses unexpected schema
-[23Nov2021 13:54:38.454] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[13:54:38] [Render thread/INFO]: Setting user: Dev
-[13:54:38] [Render thread/INFO]: Backend library: LWJGL version 3.2.2 SNAPSHOT
-[13:54:40] [modloading-worker-11/INFO]: Forge mod loading, version 37.0.112, for MC 1.17.1 with MCP 20210706.113038
-[13:54:40] [modloading-worker-11/INFO]: MinecraftForge v37.0.112 Initialized
-[23Nov2021 13:54:41.212] [Render thread/INFO] [com.mojang.text2speech.NarratorWindows/]: Narrator library for x64 successfully loaded
-[13:54:41] [Render thread/INFO]: Reloading ResourceManager: Default, Mod Resources
-[23Nov2021 13:54:41.418] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
-[23Nov2021 13:54:42.297] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: BETA Current: 37.0.112 Target: 37.0.112
-[13:54:52] [Render thread/INFO]: OpenAL initialized.
-[13:54:52] [Render thread/INFO]: Sound engine started
-[13:54:52] [Render thread/INFO]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
-[13:54:52] [Render thread/INFO]: Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
-[13:54:52] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[13:54:52] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[13:54:52] [Render thread/INFO]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[13:54:52] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[13:54:52] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[13:54:54] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
-[13:54:54] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[13:54:54] [Render thread/INFO]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[13:54:55] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
-[13:55:12] [Render thread/INFO]: Stopping!
+[30Nov2021 20:55:20.789] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 1.18, --assetsDir, C:\Users\Eivind\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 38.0.0, --fml.mcVersion, 1.18, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20211130.085255]
+[30Nov2021 20:55:20.792] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 9.0.7+91+master.8569cdf starting: java version 17.0.1 by Eclipse Adoptium
+[30Nov2021 20:55:20.888] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.4 Source=union:/C:/Users/Eivind/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.4/4ec7d77d9ab32596ca0b78bb123956734767e3a/mixin-0.8.4.jar%2327! Service=ModLauncher Env=CLIENT
+[30Nov2021 20:55:22.027] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\Eivind\.gradle\caches\forge_gradle\assets, --assetIndex, 1.18]
+[20:55:27] [Render thread/WARN]: Assets URL 'union:/C:/Users/Eivind/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.18-38.0.0_mapped_official_1.18/forge-1.18-38.0.0_mapped_official_1.18-recomp.jar%2377!/assets/.mcassetsroot' uses unexpected schema
+[20:55:27] [Render thread/WARN]: Assets URL 'union:/C:/Users/Eivind/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.18-38.0.0_mapped_official_1.18/forge-1.18-38.0.0_mapped_official_1.18-recomp.jar%2377!/data/.mcassetsroot' uses unexpected schema
+[30Nov2021 20:55:27.226] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[20:55:27] [Render thread/INFO]: Setting user: Dev
+[20:55:27] [Render thread/INFO]: Backend library: LWJGL version 3.2.2 SNAPSHOT
+[20:55:30] [modloading-worker-0/INFO]: Forge mod loading, version 38.0.0, for MC 1.18 with MCP 20211130.085255
+[20:55:30] [modloading-worker-0/INFO]: MinecraftForge v38.0.0 Initialized
+[30Nov2021 20:55:31.746] [Render thread/INFO] [com.mojang.text2speech.NarratorWindows/]: Narrator library for x64 successfully loaded
+[20:55:31] [Render thread/INFO]: Reloading ResourceManager: Default, Mod Resources
+[20:55:31] [modloading-worker-0/WARN]: Configuration file C:\Users\Eivind\Documents\Development\Modding\CHA-S\forge\run\config\forge-client.toml is not correct. Correcting
+[20:55:31] [modloading-worker-0/WARN]: Incorrect key client.selectiveResourceReloadEnabled was corrected from true to its default, null. 
+[30Nov2021 20:55:32.758] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[30Nov2021 20:55:33.701] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: BETA Current: 38.0.0 Target: 38.0.0
+[20:55:40] [Render thread/INFO]: OpenAL initialized on device OpenAL Soft on Speakers (Yeti Stereo Microphone)
+[20:55:40] [Render thread/INFO]: Sound engine started
+[20:55:40] [Render thread/INFO]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[20:55:40] [Render thread/INFO]: Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
+[20:55:40] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[20:55:40] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[20:55:40] [Render thread/INFO]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[20:55:40] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[20:55:40] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[20:55:41] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[20:55:41] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[20:55:41] [Render thread/INFO]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[20:55:54] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
+[20:56:11] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[20:56:11] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[20:56:11] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[20:56:11] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[20:56:11] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[20:56:11] [Render thread/INFO]: Reloading ResourceManager: Default, main, 
+[20:56:12] [Render thread/INFO]: Loaded 7 recipes
+[20:56:13] [Render thread/INFO]: Loaded 1141 advancements
+[20:56:13] [Render thread/WARN]: This world was saved with mod forge version 37.0.112 and it is now at version 38.0.0, things may not work well
+[20:56:13] [Render thread/INFO]: Injecting existing registry data into this CLIENT instance
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:badlands_plateau
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:bamboo_jungle_hills
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:birch_forest_hills
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:dark_forest_hills
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:deep_warm_ocean
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:desert_hills
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:desert_lakes
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:giant_spruce_taiga
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:giant_spruce_taiga_hills
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:giant_tree_taiga
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:giant_tree_taiga_hills
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:gravelly_mountains
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:jungle_edge
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:jungle_hills
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:modified_badlands_plateau
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:modified_gravelly_mountains
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:modified_jungle
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:modified_jungle_edge
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:modified_wooded_badlands_plateau
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:mountain_edge
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:mountains
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:mushroom_field_shore
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:shattered_savanna
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:shattered_savanna_plateau
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:snowy_mountains
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:snowy_taiga_hills
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:snowy_taiga_mountains
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:snowy_tundra
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:stone_shore
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:swamp_hills
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:taiga_hills
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:taiga_mountains
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:tall_birch_forest
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:tall_birch_hills
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:wooded_badlands_plateau
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:wooded_hills
+[20:56:13] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:wooded_mountains
+[20:56:13] [Render thread/ERROR]: Unidentified mapping from registry minecraft:worldgen/biome
+	minecraft:badlands_plateau: 39
+	minecraft:bamboo_jungle_hills: 169
+	minecraft:birch_forest_hills: 28
+	minecraft:dark_forest_hills: 157
+	minecraft:deep_warm_ocean: 47
+	minecraft:desert_hills: 17
+	minecraft:desert_lakes: 130
+	minecraft:giant_spruce_taiga: 160
+	minecraft:giant_spruce_taiga_hills: 161
+	minecraft:giant_tree_taiga: 32
+	minecraft:giant_tree_taiga_hills: 33
+	minecraft:gravelly_mountains: 131
+	minecraft:jungle_edge: 23
+	minecraft:jungle_hills: 22
+	minecraft:modified_badlands_plateau: 167
+	minecraft:modified_gravelly_mountains: 162
+	minecraft:modified_jungle: 149
+	minecraft:modified_jungle_edge: 151
+	minecraft:modified_wooded_badlands_plateau: 166
+	minecraft:mountain_edge: 20
+	minecraft:mountains: 3
+	minecraft:mushroom_field_shore: 15
+	minecraft:shattered_savanna: 163
+	minecraft:shattered_savanna_plateau: 164
+	minecraft:snowy_mountains: 13
+	minecraft:snowy_taiga_hills: 31
+	minecraft:snowy_taiga_mountains: 158
+	minecraft:snowy_tundra: 12
+	minecraft:stone_shore: 25
+	minecraft:swamp_hills: 134
+	minecraft:taiga_hills: 19
+	minecraft:taiga_mountains: 133
+	minecraft:tall_birch_forest: 155
+	minecraft:tall_birch_hills: 156
+	minecraft:wooded_badlands_plateau: 38
+	minecraft:wooded_hills: 18
+	minecraft:wooded_mountains: 34
+
+[20:56:13] [Render thread/WARN]: Forge Mod Loader detected missing registry entries.
+
+There are 37 missing entries in this save.
+If you continue the missing entries will get removed.
+A world backup will be automatically created in your saves directory.
+
+
+[20:56:13] [Render thread/WARN]: Missing minecraft:worldgen/biome:
+    minecraft:badlands_plateau
+    minecraft:bamboo_jungle_hills
+    minecraft:birch_forest_hills
+    minecraft:dark_forest_hills
+    minecraft:deep_warm_ocean
+    minecraft:desert_hills
+    minecraft:desert_lakes
+    minecraft:giant_spruce_taiga
+    minecraft:giant_spruce_taiga_hills
+    minecraft:giant_tree_taiga
+    minecraft:giant_tree_taiga_hills
+    minecraft:gravelly_mountains
+    minecraft:jungle_edge
+    minecraft:jungle_hills
+    minecraft:modified_badlands_plateau
+    minecraft:modified_gravelly_mountains
+    minecraft:modified_jungle
+    minecraft:modified_jungle_edge
+    minecraft:modified_wooded_badlands_plateau
+    minecraft:mountain_edge
+    minecraft:mountains
+    minecraft:mushroom_field_shore
+    minecraft:shattered_savanna
+    minecraft:shattered_savanna_plateau
+    minecraft:snowy_mountains
+    minecraft:snowy_taiga_hills
+    minecraft:snowy_taiga_mountains
+    minecraft:snowy_tundra
+    minecraft:stone_shore
+    minecraft:swamp_hills
+    minecraft:taiga_hills
+    minecraft:taiga_mountains
+    minecraft:tall_birch_forest
+    minecraft:tall_birch_hills
+    minecraft:wooded_badlands_plateau
+    minecraft:wooded_hills
+    minecraft:wooded_mountains
+
+
+[20:56:13] [Render thread/ERROR]: There are unidentified mappings in this world - we are going to attempt to process anyway
+[20:56:13] [Render thread/WARN]: Registry minecraft:item: Object did not get ID it asked for. Name: minecraft:music_disc_otherside Expected: 1027 Got: 1100
+[20:56:13] [Render thread/WARN]: Registry minecraft:sound_event: Object did not get ID it asked for. Name: minecraft:item.bundle.drop_contents Expected: 159 Got: 1190
+[20:56:13] [Render thread/WARN]: Registry minecraft:sound_event: Object did not get ID it asked for. Name: minecraft:item.bundle.insert Expected: 160 Got: 1191
+[20:56:13] [Render thread/WARN]: Registry minecraft:sound_event: Object did not get ID it asked for. Name: minecraft:item.bundle.remove_one Expected: 161 Got: 1192
+[20:56:13] [Render thread/WARN]: Registry minecraft:sound_event: Object did not get ID it asked for. Name: minecraft:block.growing_plant.crop Expected: 462 Got: 1193
+[20:56:13] [Render thread/WARN]: Registry minecraft:sound_event: Object did not get ID it asked for. Name: minecraft:music_disc.otherside Expected: 633 Got: 1194
+[20:56:13] [Render thread/WARN]: Registry minecraft:sound_event: Object did not get ID it asked for. Name: minecraft:music.overworld.dripstone_caves Expected: 640 Got: 1195
+[20:56:13] [Render thread/WARN]: Registry minecraft:sound_event: Object did not get ID it asked for. Name: minecraft:music.overworld.grove Expected: 641 Got: 1196
+[20:56:13] [Render thread/WARN]: Registry minecraft:sound_event: Object did not get ID it asked for. Name: minecraft:music.overworld.jagged_peaks Expected: 642 Got: 1197
+[20:56:13] [Render thread/WARN]: Registry minecraft:sound_event: Object did not get ID it asked for. Name: minecraft:music.overworld.lush_caves Expected: 643 Got: 1198
+[20:56:13] [Render thread/WARN]: Registry minecraft:sound_event: Object did not get ID it asked for. Name: minecraft:music.overworld.meadow Expected: 644 Got: 1199
+[20:56:13] [Render thread/WARN]: Registry minecraft:sound_event: Object did not get ID it asked for. Name: minecraft:music.overworld.frozen_peaks Expected: 646 Got: 1200
+[20:56:13] [Render thread/WARN]: Registry minecraft:sound_event: Object did not get ID it asked for. Name: minecraft:music.overworld.snowy_slopes Expected: 647 Got: 1201
+[20:56:13] [Render thread/WARN]: Registry minecraft:sound_event: Object did not get ID it asked for. Name: minecraft:music.overworld.stony_peaks Expected: 649 Got: 1202
+[20:56:13] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:snowy_plains Expected: 3 Got: 51
+[20:56:13] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:old_growth_birch_forest Expected: 11 Got: 52
+[20:56:13] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:old_growth_pine_taiga Expected: 12 Got: 53
+[20:56:13] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:old_growth_spruce_taiga Expected: 13 Got: 54
+[20:56:13] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:windswept_hills Expected: 18 Got: 55
+[20:56:13] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:windswept_gravelly_hills Expected: 19 Got: 56
+[20:56:13] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:windswept_forest Expected: 20 Got: 57
+[20:56:13] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:windswept_savanna Expected: 21 Got: 58
+[20:56:13] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:sparse_jungle Expected: 23 Got: 59
+[20:56:13] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:wooded_badlands Expected: 27 Got: 60
+[20:56:13] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:meadow Expected: 28 Got: 61
+[20:56:13] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:grove Expected: 29 Got: 62
+[20:56:13] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:snowy_slopes Expected: 30 Got: 63
+[20:56:13] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:frozen_peaks Expected: 31 Got: 64
+[20:56:13] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:jagged_peaks Expected: 32 Got: 65
+[20:56:13] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:stony_peaks Expected: 33 Got: 66
+[20:56:13] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:stony_shore Expected: 38 Got: 67
+[20:56:13] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[20:56:13] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[20:56:13] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[20:56:13] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[20:56:13] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[20:56:13] [Render thread/INFO]: Reloading ResourceManager: Default, main, 
+[20:56:14] [Render thread/INFO]: Loaded 7 recipes
+[20:56:15] [Render thread/INFO]: Loaded 1141 advancements
+[20:56:15] [Render thread/WARN]: This world was saved with mod forge version 37.0.112 and it is now at version 38.0.0, things may not work well
+[20:56:15] [Render thread/INFO]: Injecting existing registry data into this CLIENT instance
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:badlands_plateau
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:bamboo_jungle_hills
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:birch_forest_hills
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:dark_forest_hills
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:deep_warm_ocean
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:desert_hills
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:desert_lakes
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:giant_spruce_taiga
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:giant_spruce_taiga_hills
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:giant_tree_taiga
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:giant_tree_taiga_hills
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:gravelly_mountains
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:jungle_edge
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:jungle_hills
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:modified_badlands_plateau
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:modified_gravelly_mountains
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:modified_jungle
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:modified_jungle_edge
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:modified_wooded_badlands_plateau
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:mountain_edge
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:mountains
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:mushroom_field_shore
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:shattered_savanna
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:shattered_savanna_plateau
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:snowy_mountains
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:snowy_taiga_hills
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:snowy_taiga_mountains
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:snowy_tundra
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:stone_shore
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:swamp_hills
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:taiga_hills
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:taiga_mountains
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:tall_birch_forest
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:tall_birch_hills
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:wooded_badlands_plateau
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:wooded_hills
+[20:56:15] [Render thread/INFO]: Registry minecraft:worldgen/biome: Found a missing id from the world minecraft:wooded_mountains
+[20:56:15] [Render thread/ERROR]: Unidentified mapping from registry minecraft:worldgen/biome
+	minecraft:badlands_plateau: 39
+	minecraft:bamboo_jungle_hills: 169
+	minecraft:birch_forest_hills: 28
+	minecraft:dark_forest_hills: 157
+	minecraft:deep_warm_ocean: 47
+	minecraft:desert_hills: 17
+	minecraft:desert_lakes: 130
+	minecraft:giant_spruce_taiga: 160
+	minecraft:giant_spruce_taiga_hills: 161
+	minecraft:giant_tree_taiga: 32
+	minecraft:giant_tree_taiga_hills: 33
+	minecraft:gravelly_mountains: 131
+	minecraft:jungle_edge: 23
+	minecraft:jungle_hills: 22
+	minecraft:modified_badlands_plateau: 167
+	minecraft:modified_gravelly_mountains: 162
+	minecraft:modified_jungle: 149
+	minecraft:modified_jungle_edge: 151
+	minecraft:modified_wooded_badlands_plateau: 166
+	minecraft:mountain_edge: 20
+	minecraft:mountains: 3
+	minecraft:mushroom_field_shore: 15
+	minecraft:shattered_savanna: 163
+	minecraft:shattered_savanna_plateau: 164
+	minecraft:snowy_mountains: 13
+	minecraft:snowy_taiga_hills: 31
+	minecraft:snowy_taiga_mountains: 158
+	minecraft:snowy_tundra: 12
+	minecraft:stone_shore: 25
+	minecraft:swamp_hills: 134
+	minecraft:taiga_hills: 19
+	minecraft:taiga_mountains: 133
+	minecraft:tall_birch_forest: 155
+	minecraft:tall_birch_hills: 156
+	minecraft:wooded_badlands_plateau: 38
+	minecraft:wooded_hills: 18
+	minecraft:wooded_mountains: 34
+
+[20:56:15] [Render thread/WARN]: Forge Mod Loader detected missing registry entries.
+
+There are 37 missing entries in this save.
+If you continue the missing entries will get removed.
+A world backup will be automatically created in your saves directory.
+
+
+[20:56:15] [Render thread/WARN]: Missing minecraft:worldgen/biome:
+    minecraft:badlands_plateau
+    minecraft:bamboo_jungle_hills
+    minecraft:birch_forest_hills
+    minecraft:dark_forest_hills
+    minecraft:deep_warm_ocean
+    minecraft:desert_hills
+    minecraft:desert_lakes
+    minecraft:giant_spruce_taiga
+    minecraft:giant_spruce_taiga_hills
+    minecraft:giant_tree_taiga
+    minecraft:giant_tree_taiga_hills
+    minecraft:gravelly_mountains
+    minecraft:jungle_edge
+    minecraft:jungle_hills
+    minecraft:modified_badlands_plateau
+    minecraft:modified_gravelly_mountains
+    minecraft:modified_jungle
+    minecraft:modified_jungle_edge
+    minecraft:modified_wooded_badlands_plateau
+    minecraft:mountain_edge
+    minecraft:mountains
+    minecraft:mushroom_field_shore
+    minecraft:shattered_savanna
+    minecraft:shattered_savanna_plateau
+    minecraft:snowy_mountains
+    minecraft:snowy_taiga_hills
+    minecraft:snowy_taiga_mountains
+    minecraft:snowy_tundra
+    minecraft:stone_shore
+    minecraft:swamp_hills
+    minecraft:taiga_hills
+    minecraft:taiga_mountains
+    minecraft:tall_birch_forest
+    minecraft:tall_birch_hills
+    minecraft:wooded_badlands_plateau
+    minecraft:wooded_hills
+    minecraft:wooded_mountains
+
+
+[20:56:15] [Render thread/ERROR]: There are unidentified mappings in this world - we are going to attempt to process anyway
+[20:56:15] [Render thread/WARN]: Registry minecraft:item: Object did not get ID it asked for. Name: minecraft:music_disc_otherside Expected: 1027 Got: 1100
+[20:56:15] [Render thread/WARN]: Registry minecraft:sound_event: Object did not get ID it asked for. Name: minecraft:item.bundle.drop_contents Expected: 159 Got: 1190
+[20:56:15] [Render thread/WARN]: Registry minecraft:sound_event: Object did not get ID it asked for. Name: minecraft:item.bundle.insert Expected: 160 Got: 1191
+[20:56:15] [Render thread/WARN]: Registry minecraft:sound_event: Object did not get ID it asked for. Name: minecraft:item.bundle.remove_one Expected: 161 Got: 1192
+[20:56:15] [Render thread/WARN]: Registry minecraft:sound_event: Object did not get ID it asked for. Name: minecraft:block.growing_plant.crop Expected: 462 Got: 1193
+[20:56:15] [Render thread/WARN]: Registry minecraft:sound_event: Object did not get ID it asked for. Name: minecraft:music_disc.otherside Expected: 633 Got: 1194
+[20:56:15] [Render thread/WARN]: Registry minecraft:sound_event: Object did not get ID it asked for. Name: minecraft:music.overworld.dripstone_caves Expected: 640 Got: 1195
+[20:56:15] [Render thread/WARN]: Registry minecraft:sound_event: Object did not get ID it asked for. Name: minecraft:music.overworld.grove Expected: 641 Got: 1196
+[20:56:15] [Render thread/WARN]: Registry minecraft:sound_event: Object did not get ID it asked for. Name: minecraft:music.overworld.jagged_peaks Expected: 642 Got: 1197
+[20:56:15] [Render thread/WARN]: Registry minecraft:sound_event: Object did not get ID it asked for. Name: minecraft:music.overworld.lush_caves Expected: 643 Got: 1198
+[20:56:15] [Render thread/WARN]: Registry minecraft:sound_event: Object did not get ID it asked for. Name: minecraft:music.overworld.meadow Expected: 644 Got: 1199
+[20:56:15] [Render thread/WARN]: Registry minecraft:sound_event: Object did not get ID it asked for. Name: minecraft:music.overworld.frozen_peaks Expected: 646 Got: 1200
+[20:56:15] [Render thread/WARN]: Registry minecraft:sound_event: Object did not get ID it asked for. Name: minecraft:music.overworld.snowy_slopes Expected: 647 Got: 1201
+[20:56:15] [Render thread/WARN]: Registry minecraft:sound_event: Object did not get ID it asked for. Name: minecraft:music.overworld.stony_peaks Expected: 649 Got: 1202
+[20:56:15] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:snowy_plains Expected: 3 Got: 51
+[20:56:15] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:old_growth_birch_forest Expected: 11 Got: 52
+[20:56:15] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:old_growth_pine_taiga Expected: 12 Got: 53
+[20:56:15] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:old_growth_spruce_taiga Expected: 13 Got: 54
+[20:56:15] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:windswept_hills Expected: 18 Got: 55
+[20:56:15] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:windswept_gravelly_hills Expected: 19 Got: 56
+[20:56:15] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:windswept_forest Expected: 20 Got: 57
+[20:56:15] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:windswept_savanna Expected: 21 Got: 58
+[20:56:15] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:sparse_jungle Expected: 23 Got: 59
+[20:56:15] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:wooded_badlands Expected: 27 Got: 60
+[20:56:15] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:meadow Expected: 28 Got: 61
+[20:56:15] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:grove Expected: 29 Got: 62
+[20:56:15] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:snowy_slopes Expected: 30 Got: 63
+[20:56:15] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:frozen_peaks Expected: 31 Got: 64
+[20:56:15] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:jagged_peaks Expected: 32 Got: 65
+[20:56:15] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:stony_peaks Expected: 33 Got: 66
+[20:56:15] [Render thread/WARN]: Registry minecraft:worldgen/biome: Object did not get ID it asked for. Name: minecraft:stony_shore Expected: 38 Got: 67
+[30Nov2021 20:56:16.182] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[20:56:16] [Server thread/INFO]: Starting integrated minecraft server version 1.18
+[20:56:16] [Server thread/INFO]: Generating keypair
+[20:56:16] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[20:56:18] [Render thread/INFO]: Preparing spawn area: 0%
+[20:56:18] [Render thread/INFO]: Preparing spawn area: 0%
+[20:56:18] [Render thread/INFO]: Preparing spawn area: 0%
+[20:56:18] [Render thread/INFO]: Preparing spawn area: 0%
+[20:56:18] [Render thread/INFO]: Preparing spawn area: 0%
+[20:56:18] [Render thread/INFO]: Preparing spawn area: 0%
+[20:56:19] [Render thread/INFO]: Preparing spawn area: 0%
+[20:56:19] [Render thread/INFO]: Preparing spawn area: 0%
+[20:56:20] [Render thread/INFO]: Preparing spawn area: 2%
+[20:56:20] [Render thread/INFO]: Preparing spawn area: 4%
+[20:56:21] [Render thread/INFO]: Preparing spawn area: 5%
+[20:56:21] [Render thread/INFO]: Preparing spawn area: 10%
+[20:56:22] [Render thread/INFO]: Preparing spawn area: 12%
+[20:56:22] [Render thread/INFO]: Preparing spawn area: 19%
+[20:56:23] [Render thread/INFO]: Preparing spawn area: 26%
+[20:56:23] [Render thread/INFO]: Preparing spawn area: 34%
+[20:56:24] [Render thread/INFO]: Preparing spawn area: 42%
+[20:56:24] [Render thread/INFO]: Preparing spawn area: 48%
+[20:56:25] [Render thread/INFO]: Preparing spawn area: 57%
+[20:56:25] [Render thread/INFO]: Preparing spawn area: 68%
+[20:56:26] [Render thread/INFO]: Preparing spawn area: 76%
+[20:56:26] [Render thread/INFO]: Preparing spawn area: 83%
+[20:56:27] [Render thread/INFO]: Preparing spawn area: 88%
+[20:56:27] [Render thread/INFO]: Preparing spawn area: 94%
+[20:56:28] [Render thread/INFO]: Time elapsed: 11699 ms
+[20:56:28] [Server thread/INFO]: Changing view distance to 12, from 10
+[20:56:28] [Server thread/INFO]: Changing simulation distance to 12, from 0
+[20:56:28] [Netty Local Client IO #0/INFO]: Connected to a modded server.
+[20:56:28] [Server thread/INFO]: Using new advancement loading for net.minecraft.server.PlayerAdvancements@5b5b59a0
+[20:56:28] [Server thread/INFO]: Dev[local:E:51a78f2b] logged in with entity id 361 at (-121.52252472766963, 63.0, -104.50472563785368)
+[20:56:28] [Server thread/INFO]: Dev joined the game
+[20:56:29] [Render thread/INFO]: Loaded 84 advancements
+[20:57:17] [Render thread/WARN]: Unable to play empty soundEvent: minecraft:entity.cod.ambient
+[20:57:43] [Server thread/INFO]: Saving and pausing game...
+[20:57:43] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[20:57:43] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[20:57:43] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[20:57:43] [Server thread/INFO]: Dev lost connection: Disconnected
+[20:57:43] [Server thread/INFO]: Dev left the game
+[20:57:43] [Server thread/INFO]: Stopping singleplayer server as player logged out
+[20:57:43] [Server thread/INFO]: Stopping server
+[20:57:43] [Server thread/INFO]: Saving players
+[20:57:43] [Server thread/INFO]: Saving worlds
+[20:57:43] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[20:57:43] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[20:57:43] [Server thread/INFO]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[20:57:43] [Server thread/INFO]: ThreadedAnvilChunkStorage (New World): All chunks are saved
+[20:57:43] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[20:57:43] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[20:57:43] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[20:57:44] [Render thread/INFO]: Stopping!

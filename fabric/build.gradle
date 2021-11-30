@@ -55,7 +55,7 @@ curseforge {
         releaseType = "${RELEASE_TYPE}"
         addGameVersion "${MOD_LOADER}"
         addGameVersion "${JAVA_VERSION}"
-        addGameVersion '1.18-Snapshot'
+        addGameVersion "${MC_VERSION_GENERAL}"
         mainArtifact(remapJar) {
             displayName = "${ALIAS} v${VERSION} for ${MC_VERSION_GENERAL} ${MOD_LOADER}"
         }
