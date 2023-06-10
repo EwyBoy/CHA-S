@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "chas",
-  "version": "1.18-1.8-Fabric",
+  "version": "1.20-1.10-Fabric",
 
   "name": "Craftable Horse Armour & Saddle",
   "description": "Read mod name",
@@ -22,8 +22,7 @@
   "mixins": [],
 
   "depends": {
-    "fabricloader": ">=0.11.3",
-    "minecraft": "1.18.x",
-    "fabric-key-binding-api-v1": "*"
+    "fabricloader": ">=0.14.8",
+    "minecraft": "1.20.x"
   }
 }

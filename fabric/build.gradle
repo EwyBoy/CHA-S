@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '0.10-SNAPSHOT'
+    id 'fabric-loom' version '0.11-SNAPSHOT'
     id 'com.matthewprenger.cursegradle' version '1.4.0'
     id 'maven-publish'
 }
@@ -11,14 +11,24 @@ archivesBaseName = project.MOD_NAME
 version = project.MC_VERSION_GENERAL + "-" + project.VERSION + "-" + project.MOD_LOADER
 group = project.MAVEN_GROUP
 
-repositories {}
+repositories {
+    maven { url = "https://maven.shedaniel.me/" }
+    maven { url = "https://maven.terraformersmc.com/" }
+    maven { url = "https://maven.gegy.dev" }
+}
 
 dependencies {
     minecraft "com.mojang:minecraft:${project.MC_VERSION}"
-    mappings "net.fabricmc:yarn:${project.YARN_MAPPINGS}:v2"
+    mappings loom.officialMojangMappings()
 
     modImplementation "net.fabricmc:fabric-loader:${project.LOADER_VERSION}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.FABRIC_VERSION}"
+}
+
+def includeFabricApiModule(String moduleName) {
+    Object dependency = fabricApi.module(moduleName, project.FABRIC_VERSION)
+    dependencies.modImplementation(dependency)
+    dependencies.include(dependency)
 }
 
 processResources {
@@ -40,7 +50,7 @@ java {
 
 jar {
     from("LICENSE") {
-        rename { "${it}_${project.archivesBaseName}"}
+        rename { "${it}_${project.MOD_NAME}"}
     }
 }
 
