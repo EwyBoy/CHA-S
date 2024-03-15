@@ -1,0 +1,28 @@
+modLoader="javafml"
+loaderVersion="[2,)"
+license="MIT License"
+issueTrackerURL="https://github.com/EwyBoy/CHA-S/issues"
+logoFile="icon.png"
+
+[[mods]]
+    modId="chas"
+    version="${version}"
+    displayName="CHA&S - Craftable Horse Armour and Saddle"
+    displayURL="https://www.curseforge.com/minecraft/mc-mods/cha-s"
+    credits="You came here for the credits, huh?"
+    authors="Ewy"
+    description="Read the name of the mod.."
+
+[[dependencies.chas]]
+    modId="neoforge"
+    type="required"
+    versionRange="[20,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.chas]]
+    modId="minecraft"
+    type="required"
+    versionRange="[1.20, 1.21)"
+    ordering="NONE"
+    side="BOTH"
