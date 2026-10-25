@@ -20,7 +20,7 @@ pluginManagement.repositories {
     }
 }
 
-rootProject.name = "World-Stripper"
+rootProject.name = "CHA-S"
 
 // We want lowercase folder names but uppercase project names
 project(":common").name = "Common"
