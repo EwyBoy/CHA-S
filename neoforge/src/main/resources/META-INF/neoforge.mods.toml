@@ -15,7 +15,8 @@ description="${mod_description}"
 modId="neoforge"
 type="required"
 versionRange="${neoforge_version_range}"
-ordering="NONE"
+# AFTER puts our data pack above NeoForge's, whose own leather_horse_armor and saddle recipes would otherwise win
+ordering="AFTER"
 side="BOTH"
 
 [[dependencies.${mod_id}]]
