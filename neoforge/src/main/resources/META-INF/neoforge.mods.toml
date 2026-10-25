@@ -16,8 +16,7 @@ logoFile="icon.png"
 modId="neoforge"
 type="required"
 versionRange="${neoforge_version_range}"
-# AFTER puts our data pack above NeoForge's, whose own leather_horse_armor and saddle recipes would otherwise win
-ordering="AFTER"
+ordering="NONE"
 side="BOTH"
 
 [[dependencies.${mod_id}]]
