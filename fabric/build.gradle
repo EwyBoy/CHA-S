@@ -1,48 +1,28 @@
 plugins {
-    id 'java'
-    id 'idea'
-    id "fabric-loom" version "1.6-SNAPSHOT"
-    id "com.matthewprenger.cursegradle" version "1.4.0"
-}
-
-base {
-    archivesName = "${mod_id}-${minecraft_version}-${mod_version}-fabric"
+    id 'multiloader-loader'
+    id 'net.fabricmc.fabric-loom'
 }
 
 dependencies {
     minecraft "com.mojang:minecraft:${minecraft_version}"
-    mappings loom.officialMojangMappings()
-    compileOnly project(":Common")
-    modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
-    modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
+    implementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
 }
 
 loom {
-    mixin {
-        defaultRefmapName.set("${mod_id}.refmap.json")
-    }
     runs {
         client {
             client()
-            setConfigName("Fabric Client")
+            setConfigName('Fabric Client')
             ideConfigGenerated(true)
-            runDir("run")
+            runDir('runs/client')
         }
         server {
             server()
-            setConfigName("Fabric Server")
+            setConfigName('Fabric Server')
             ideConfigGenerated(true)
-            runDir("run")
+            runDir('runs/server')
+            programArg('--nogui')
         }
     }
-}
-
-tasks.withType(JavaCompile).configureEach {
-    source(project(":Common").sourceSets.main.allSource)
-}
-tasks.withType(Javadoc).configureEach {
-    source(project(":Common").sourceSets.main.allJava)
-}
-tasks.named("sourcesJar", Jar) {
-    from(project(":Common").sourceSets.main.allSource)
 }

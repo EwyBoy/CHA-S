@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "I": "minecraft:golden_leggings",
+    "M": "minecraft:golden_helmet",
+    "W": "minecraft:white_wool",
+    "X": "#c:ingots/gold"
+  },
+  "pattern": [
+    "  M",
+    "XWX",
+    "I I"
+  ],
+  "result": {
+    "id": "minecraft:golden_horse_armor"
+  }
+}

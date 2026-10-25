@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "I": "minecraft:diamond_leggings",
+    "M": "minecraft:diamond_helmet",
+    "W": "minecraft:white_wool",
+    "X": "#c:gems/diamond"
+  },
+  "pattern": [
+    "  M",
+    "XWX",
+    "I I"
+  ],
+  "result": {
+    "id": "minecraft:diamond_horse_armor"
+  }
+}

@@ -10,16 +10,16 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        platform: [forge, neoforge, fabric]
+        platform: [neoforge, fabric]
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup JDK 21
+      - name: Setup JDK 25
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: 21
+          java-version: 25
 
       - name: Make gradlew executable
         run: chmod +x ./gradlew
@@ -28,8 +28,6 @@ jobs:
         run: |
           if [ ${{ matrix.platform }} == "neoforge" ]; then
             ./gradlew clean neoforge:build
-          elif [ ${{ matrix.platform }} == "forge" ]; then
-            ./gradlew clean forge:build
           elif [ ${{ matrix.platform }} == "fabric" ]; then
             ./gradlew clean fabric:build
           fi
@@ -41,7 +39,7 @@ jobs:
           path: ${{ matrix.platform }}/build/libs
 
       - name: Deploy to CurseForge, Modrinth, or GitHub Releases
-        if: matrix.platform == 'forge' || matrix.platform == 'neoforge' || matrix.platform == 'fabric'
+        if: matrix.platform == 'neoforge' || matrix.platform == 'fabric'
         uses: Kir-Antipov/mc-publish@v3.3
         with:
           curseforge-id: cha-s
@@ -53,11 +51,11 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           changelog: ${{ steps.get-changelog.outputs.changelog }}
 
-          name: CHA&S v3.0 for 1.21 ${{ matrix.platform }}
+          name: CHA&S v3.1.0 for 26.3 ${{ matrix.platform }}
           loaders: ${{ matrix.platform }}
-          game-versions: "1.21"
+          game-versions: "26.3"
           release-type: release
-          java: 21
+          java: 25
           files: |
             ${{ matrix.platform }}/build/libs/!(*-@(sources|javadoc)).jar
             ${{ matrix.platform }}/build/libs/*-@(sources|javadoc).jar
