@@ -1,6 +1,6 @@
 {
   "result": {
-    "item": "minecraft:saddle"
+    "id": "minecraft:saddle"
   },
   "pattern": [
     "XXX",
@@ -13,7 +13,7 @@
       "item": "minecraft:leather"
     },
     "I": {
-      "tag": "forge:ingots/iron"
+      "item": "minecraft:iron_ingot"
     },
     "O": {
       "item": "minecraft:string"

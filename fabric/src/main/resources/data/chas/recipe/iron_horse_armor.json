@@ -1,6 +1,6 @@
 {
   "result": {
-    "item": "minecraft:leather_horse_armor"
+    "id": "minecraft:iron_horse_armor"
   },
   "pattern": [
     "  M",
@@ -13,13 +13,13 @@
       "item": "minecraft:white_wool"
     },
     "X": {
-      "item": "minecraft:leather"
+      "item": "minecraft:iron_ingot"
     },
     "I": {
-      "item": "minecraft:leather_leggings"
+      "item": "minecraft:iron_leggings"
     },
     "M": {
-      "item": "minecraft:leather_helmet"
+      "item": "minecraft:iron_helmet"
     }
   }
 }

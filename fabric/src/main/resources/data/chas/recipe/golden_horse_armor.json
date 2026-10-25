@@ -1,6 +1,6 @@
 {
   "result": {
-    "item": "minecraft:diamond_horse_armor"
+    "id": "minecraft:golden_horse_armor"
   },
   "pattern": [
     "  M",
@@ -13,13 +13,13 @@
       "item": "minecraft:white_wool"
     },
     "X": {
-      "tag": "forge:gems/diamond"
+      "item": "minecraft:gold_ingot"
     },
     "I": {
-      "item": "minecraft:diamond_leggings"
+      "item": "minecraft:golden_leggings"
     },
     "M": {
-      "item": "minecraft:diamond_helmet"
+      "item": "minecraft:golden_helmet"
     }
   }
 }
